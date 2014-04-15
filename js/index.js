@@ -1,16 +1,6 @@
 var ajax=(function($){
     function started(){ 
-    	$("#geocomplete").geocomplete()
-          .bind("geocode:result", function(event, result){
-            $.log("Result: " + result.formatted_address);
-          })
-          .bind("geocode:error", function(event, status){
-            $.log("ERROR: " + status);
-          })
-          .bind("geocode:multiple", function(event, results){
-            $.log("Multiple: " + results.length + " results found");
-        });
-
+    	
     	$('#mapa').on('shown.bs.modal', function (e) {
 		  // do something...
 		  	var lat = 45.163779;                     
@@ -22,19 +12,6 @@ var ajax=(function($){
 	                 $('#map_canvas').gmap('getMap').panTo(position);
 	        });      
 		});
-		var defaultBounds = new google.maps.LatLngBounds(
-			var lat = position.coords.latitude;                     
-        var lng = position.coords.longitude;  
-		  new google.maps.LatLng(-33.8902, 151.1759),
-		  new google.maps.LatLng(-33.8474, 151.2631));
-
-		var input = document.getElementById('searchTextField');
-		var options = {
-		  bounds: defaultBounds,
-		  types: ['establishment']
-		};
-
-		autocomplete = new google.maps.places.Autocomplete(input, options);
        
     }
          
