@@ -1,0 +1,29 @@
+{
+  "name": "capitalcarcarriers",
+  "version": "0.0.0",
+  "homepage": "https://github.com/soru13/capitalcarcarriers",
+  "authors": [
+    "soru13 <jesus.ed13@gmail.com>"
+  ],
+  "description": "transport cars",
+  "main": "index.html",
+  "keywords": [
+    "vehicle",
+    "shipping",
+    "transport",
+    "cars",
+    "transport",
+    "trucks"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}
