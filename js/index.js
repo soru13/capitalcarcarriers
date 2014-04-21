@@ -1,6 +1,21 @@
 var ajax=(function($){
     function started(){ 
-    	
+    	window.fbAsyncInit = function() {
+	        FB.init({
+	          appId      : '{882187158474275}',
+	          status     : true,
+	          xfbml      : true
+	        });
+	      };
+
+	      (function(d, s, id){
+	         var js, fjs = d.getElementsByTagName(s)[0];
+	         if (d.getElementById(id)) {return;}
+	         js = d.createElement(s); js.id = id;
+	         js.src = "//connect.facebook.net/en_US/all.js";
+	         fjs.parentNode.insertBefore(js, fjs);
+	       }(document, 'script', 'facebook-jssdk'));
+		      
     	$('#mapa').on('shown.bs.modal', function (e) {
 		  // do something...
 		  	var lat = 45.163779;                     
@@ -26,3 +41,5 @@ var ajax=(function($){
 (function() {
     $(document).on('ready',ajax.inicio);
 }).call(this);
+
+
